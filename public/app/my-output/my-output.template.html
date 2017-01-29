@@ -1,0 +1,11 @@
+<div class="panel-group">
+    <div class="panel panel-default" data-ng-repeat="item in $ctrl.data">
+        <div class="panel-heading">
+            <h1 class="panel-title">{{ item.title }}</h1>
+        </div>
+        <div class="panel-body">
+            <p>{{ item.message }}</p>
+            <button class="btn btn-danger btn-sm pull-right" data-ng-click="$ctrl.remove($index)"><i class="glyphicon glyphicon-remove"></i></button>
+        </div>
+    </div>
+</div>

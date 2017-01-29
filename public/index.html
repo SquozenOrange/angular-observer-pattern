@@ -12,12 +12,27 @@
     
     <!-- app -->
     <script src="/app/app.module.js"></script>
-    <!-- my-input -->
     <script src="/app/my-input/my-input.module.js"></script>
+    <script src="/app/my-output/my-output.module.js"></script>
+    <script src="/app/services/eventNotify.js"></script>
+
+    <!-- components -->
     <script src="/app/my-input/my-input.component.js"></script>
+    <script src="/app/my-output/my-output.component.js"></script>
     
 </head>
-<body data-ng-app="app">
-    <my-input></my-input>
-</body>
+    <body data-ng-app="app">
+        
+        <div class="container col-md-3"></div>
+        
+        <div class="container col-md-6">
+            
+            <my-input></my-input>
+            <my-output></my-output>
+            
+        </div>
+        
+        <div class="container col-md-3"></div>
+        
+    </body>
 </html>

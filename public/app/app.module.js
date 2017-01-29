@@ -1,1 +1,1 @@
-angular.module('app', ['myInput']);
+angular.module('app', ['myInput', 'myOutput']);
