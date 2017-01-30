@@ -1,0 +1,17 @@
+.toastNotification.ng-enter {
+    opacity: 0;
+    transition: all .5s ease;
+}
+
+.toastNotification.ng-enter-active {
+    opacity: 1;
+}
+
+.toastNotification.ng-leave {
+    opacity: 1;
+    transition: all .5s ease;
+}
+
+.toastNotification.ng-leave-active {
+    opacity: 0;
+}

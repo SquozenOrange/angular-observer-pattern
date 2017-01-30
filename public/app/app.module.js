@@ -1,1 +1,1 @@
-angular.module('app', ['myInput', 'myOutput']);
+angular.module('app', ['ngAnimate', 'myInput', 'myOutput', 'toastNotifications']);

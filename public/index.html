@@ -6,19 +6,25 @@
     
     <!-- CSS -->
     <link rel="stylesheet" href="/bower_components/bootstrap/dist/css/bootstrap.min.css"/>
+    <link rel="stylesheet" href="/app/toast-notifications/toast-notifications.css"/>
     
     <!-- JS -->
     <script src="/bower_components/angular/angular.min.js"></script>
+    <script src="/bower_components/angular-animate/angular-animate.min.js"></script>
     
-    <!-- app -->
+    <!-- modules -->
     <script src="/app/app.module.js"></script>
     <script src="/app/my-input/my-input.module.js"></script>
     <script src="/app/my-output/my-output.module.js"></script>
+    <script src="/app/toast-notifications/toast-notifications.module.js"></script>
+    
+    <!-- services -->
     <script src="/app/services/eventNotify.js"></script>
 
     <!-- components -->
     <script src="/app/my-input/my-input.component.js"></script>
     <script src="/app/my-output/my-output.component.js"></script>
+    <script src="/app/toast-notifications/toast-notifications.component.js"></script>
     
 </head>
     <body data-ng-app="app">
@@ -32,7 +38,11 @@
             
         </div>
         
-        <div class="container col-md-3"></div>
+        <div class="container col-md-3">
+            
+            <toast-notifications></toast-notifications>
+            
+        </div>
         
     </body>
 </html>
