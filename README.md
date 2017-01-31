@@ -1,6 +1,12 @@
 # angular-observer-pattern
 Using the Observer pattern to show One-to-Many event notifier in action
 
+# Basic Explanation
+
+When a post is made using the input form, the data will show as a new panel in <my-output/> which is seperate component. A "Toast" notification will also show on screen for 5 seconds informing you that a new post has been made. This is mirrored when a post is removed and the Toast notification will display the fact that a post has been removed. All of this is handled by the same service, `eventNotify`
+
+# Breakdown
+
 The components `myOutput` and `toastNotifications` attach them selves to an event service, `eventNotify`, which notifies them each time a change is made. 
 
 The method `eventNotify.attach()` is called from each object to attach itself to the `eventNotify.listeners` array.
