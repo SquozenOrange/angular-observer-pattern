@@ -5,7 +5,7 @@
         </div>
         <div class="panel-body">
             <p>{{ item.message }}</p>
-            <button class="btn btn-danger btn-sm pull-right" data-ng-click="$ctrl.remove($index)"><i class="glyphicon glyphicon-remove"></i></button>
+            <button class="btn btn-danger btn-sm pull-right" data-ng-click="$ctrl.removeItem($index, {title: $ctrl.data[$index].title})"><i class="glyphicon glyphicon-remove"></i></button>
         </div>
     </div>
 </div>

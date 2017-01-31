@@ -6,8 +6,8 @@ angular.module('myInput').component('myInput', {
         
         var ctrl = {};
 
-        ctrl.sendData = function(title, message){
-            eventNotify.notify(title, message);
+        ctrl.sendData = function(type, obj){
+            eventNotify.notify(type, obj);
             ctrl.title = "";
             ctrl.message = "";
         };

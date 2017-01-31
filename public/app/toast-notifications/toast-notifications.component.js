@@ -8,9 +8,19 @@ angular.module('toastNotifications').component('toastNotifications', {
         
         ctrl.data = [];
         
-        ctrl.update = function(titleArg){
-            ctrl.data.push({title: "A new post was made with the title: " + titleArg});
-            $timeout(ctrl.removeToast, 2000);
+        ctrl.update = function(type, obj){
+            switch(type){
+                case "add":
+                    ctrl.data.push({title: "A new post was made with the title: " + obj.title, type: "success"});
+                    break;
+                case "remove":
+                    ctrl.data.push({title: "The post with the title: '" + obj.title + "' was removed", type: "danger"})
+                    break;
+                default:
+                    break;
+            }
+            
+            $timeout(ctrl.removeToast, 4000);
         };
         
         ctrl.removeToast = function(){

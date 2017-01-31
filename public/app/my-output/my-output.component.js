@@ -8,12 +8,21 @@ angular.module('myOutput').component('myOutput', {
         
         ctrl.data = [{title: "Example Item", message: "This item has been added as an exmaple"}];
         
-        ctrl.update = function(titleArg, messageArg){
-            ctrl.data.push({title: titleArg, message: messageArg});
+        ctrl.update = function(type, obj){
+            switch(type){
+                case "add":
+                    ctrl.data.push({title: obj.title, message: obj.message});
+                    break;
+                default:
+                    break;
+            }
         };
         
-        ctrl.remove = function(index){
-            return confirm("Remove item?") ? ctrl.data.splice(index, 1) : false;
+        ctrl.removeItem = function(index, obj){
+            if( confirm("Remove this item?") == true ){
+                eventNotify.notify("remove", obj);
+                ctrl.data.splice(index, 1);
+            }
         }
         
         eventNotify.attach(ctrl);
