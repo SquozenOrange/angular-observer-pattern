@@ -1,15 +1,13 @@
 <form class="well">
     <h1>Post new item</h1>
     <div class="input-group">
-        <span class="input-group-addon"><i class="glyphicon glyphicon-edit"></i></span>
+        <span class="input-group-addon"><i class="glyphicon glyphicon-pencil"></i></span>
         <input type="text" class="form-control" placeholder="Title" data-ng-model="$ctrl.title"/>
     </div>
     <div class="input-group">
-        <span class="input-group-addon"><i class="glyphicon glyphicon-edit"></i></span>
+        <span class="input-group-addon"><i class="glyphicon glyphicon-pencil"></i></span>
         <input type="text" class="form-control"placeholder="Message" data-ng-model="$ctrl.message"/>
     </div>
     <br/>
-    <div class="input-group">
-        <button class="btn btn-success form-control" data-ng-click="$ctrl.sendData('add', {title: $ctrl.title, message: $ctrl.message})"><i class="glyphicon glyphicon-floppy-save"></i> Post</button>
-    </div>
+    <button class="btn btn-success btn-block form-control" data-ng-click="$ctrl.sendData('add', {title: $ctrl.title, message: $ctrl.message})">Post</button>
 </form>
